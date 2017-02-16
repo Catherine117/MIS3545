@@ -40,6 +40,7 @@ Then, add a WHERE clause to specify that the ProductID IS NULL */
 
 SELECT
 PM.ProductModelID,
+<<<<<<< HEAD
 P.Name AS ProductName
 
 FROM Production.Product AS P
@@ -48,4 +49,15 @@ ON P.ProductModelID = PM.ProductModelID
 
 WHERE
 P.ProductID IS NULL
+=======
+P.Name
+
+FROM 
+Production.ProductModel AS PM
+FULL OUTER JOIN Production.Product AS P
+ON P.ProductModelID = PM.ProductModelID
+
+WHERE
+ProductID is NULL;
+>>>>>>> 6c54c853d5b06e33fd703f9ce60a7cb9a8b96dd9
 
